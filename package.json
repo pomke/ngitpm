@@ -1,6 +1,6 @@
 {
   "name": "ngitpm",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Manage private git dependencies via simple manifest.json stored in s3.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "MIT",
   "preferGlobal" : "true",
   "bin" : { "ngitpm" : "./ngitpm" },
-  "keywords" : ["npm", "repository", "private"], 
+  "keywords" : ["npm", "registry", "private"], 
   "repository": {
     "type": "git",
     "url": "https://github.com/pomke/ngitpm.git"
