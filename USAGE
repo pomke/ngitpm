@@ -19,9 +19,9 @@
         bxVxpy0DkPU+1jju8WWGCBTBVj35QrWWH80hpgjT@n
 
     The s3 key and secret require write privs for publishing, and read to list
-    or install. It is @Rrecommended@n that you create seperate keys for these 
-    purposes, and ensure that the bucket you use does not contain any sensitive
-    information, as these keys will be added to your package.json file.
+    or install. @RIt is recommended that you create seperate keys for these 
+    purposes@n, and ensure that the bucket you use does not contain any sensitive
+    information, as these keys will be stored in your package.json file(s).
 
 
     @Cpublish@n
