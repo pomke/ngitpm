@@ -1,0 +1,64 @@
+@yngitnpm@n <command> [args]
+
+@CCommands:@n 
+     @Winit       @nConfigure current package to use an s3 ngitpm repository.
+     @Wpublish    @nPublish current version to ngitpm repository.
+     @Wlist       @nDisplay currently published versions.
+     @Winstall    @nInstall a specified package and version in ngitpm repository.
+
+
+@COptions:@n
+
+    @Cinit@n:
+
+    expects three arguments, <@Ws3 bucket/path@n>, <@Ws3 key@n> and <@Ws3 secret@n>.
+
+    eg:
+
+    $ @wngitpm init my-priv-bucket/repo KAIAITEOCMULOULCU2HA \ 
+        bxVxpy0DkPU+1jju8WWGCBTBVj35QrWWH80hpgjT@n
+
+    The s3 key and secret require write privs for publishing, and read to list
+    or install. It is @Rrecommended@n that you create seperate keys for these 
+    purposes, and ensure that the bucket you use does not contain any sensitive
+    information, as these keys will be added to your package.json file.
+
+
+    @Cpublish@n
+
+    With no arguments, publish will use the current name, package version and 
+    repository path in your package.json file, and the current commit hash.
+
+        @W--force@n
+
+        force will over-write any currently stored version in your ngitpm
+        repository with the current details. This is not recommended.
+
+        @W--commit=7739cbe@n
+
+        Instead of detecting the commit hash from the current git repository, 
+        provide an alternative commit hash.
+
+
+    @Clist@n
+
+    With no arguments, lists all packages in the repository.
+
+        @W<package>@n
+
+        List the available versions for @W<package>@n
+
+
+    @Cinstall@n
+
+    Install the package in the current package.json file as a direct git 
+    dependency. This will REMOVE any current version of the package and then
+    npm install the new version.
+    
+        @W<package>@n
+
+        Name of the package to install, default to highest version.
+
+        @W<version>@n (optional)
+
+        Specify the version number to install.
