@@ -1,0 +1,11 @@
+{
+  "name": "ngitpm",
+  "version": "0.0.1",
+  "description": "Manage private git dependencies via simple manifest.json stored in s3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pomke",
+  "license": "MIT"
+}
